@@ -2,11 +2,11 @@ import React from 'react'
 import { FiSearch } from "react-icons/fi";
 
 const RenderForm = (props) => {
-    const {setSearchOption, setEnteredOption, searchOption} = props
+    const {setSearchInputData, setInputData, searchInputData} = props
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setEnteredOption(searchOption);
+        setInputData(searchInputData);
       };
   return (
     <form onSubmit={handleSubmit}>
@@ -20,7 +20,7 @@ const RenderForm = (props) => {
             className="ps-4 py-2 rounded "
             type="text"
             placeholder="Search for a movie..."
-            onChange={(e) => setSearchOption(e.target.value)}
+            onChange={(e) => setSearchInputData(e.target.value)}
           />
         </form>
   )

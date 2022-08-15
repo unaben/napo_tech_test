@@ -4,9 +4,7 @@ import useMovieDetails from "../hooks/useMovieDetails";
 import { Card } from "react-bootstrap";
 
 const MovieDetails = ({ selectedMovieId }) => {
-  console.log("MovieDetails ID FUNC: ", selectedMovieId);
   const movieDetails = useMovieDetails(selectedMovieId);
-  console.log("Movie Details", movieDetails);
 
   return (
     <section className="mt-4 container">
@@ -26,7 +24,7 @@ const MovieDetails = ({ selectedMovieId }) => {
             </Card.Body>
           </Card>
         </div>
-        <div className="px-3">
+        <div className="px-3" style={{ maxWidth: 400 }}>
           <h2>Movie Details</h2>
           <p>{movieDetails?.Title}</p>
           {movieDetails?.Ratings?.map((rating) => {
@@ -37,7 +35,7 @@ const MovieDetails = ({ selectedMovieId }) => {
             );
           })}
           <div className="">
-            <p style={{ maxWidth: 300 }}>{movieDetails?.Plot}</p>
+            <p style={{ maxWidth: 400 }}>{movieDetails?.Plot}</p>
           </div>
           <p>Released in {movieDetails?.Released}</p>
         </div>

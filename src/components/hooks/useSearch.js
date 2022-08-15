@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 
-const useSearch = (enteredOption) => {
+const useSearch = (inputData) => {
   const [movies, setMovies] = useState([]);
+
   const getApiData = async () => {
-    const enterdedOptionToLower = enteredOption.toLowerCase();
-    const getDataURL = `https://www.omdbapi.com/?apikey=a93ceeb4&s=${enterdedOptionToLower}`;
+    const inputDataToLower = inputData.toLowerCase();
+    const getDataURL = `https://www.omdbapi.com/?apikey=a93ceeb4&s=${inputDataToLower}`;
     try {
       const response = await fetch(getDataURL);
       const resData = await response.json();
-      console.log("resData:", resData.Search);
       setMovies(resData.Search);
     } catch (error) {
       console.error(error.message);
@@ -16,10 +16,10 @@ const useSearch = (enteredOption) => {
   };
 
   useEffect(() => {
-    if (enteredOption) {
+    if (inputData) {
       getApiData();
     }
-  }, [enteredOption]);
+  }, [inputData]);
 
   return [movies];
 };

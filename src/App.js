@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Search from "./components/search/Search";
+import Search from "./components/searchInput/Search";
 import MovieDetails from "./components/movieDetails/MovieDetails";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -16,12 +16,10 @@ function App() {
               path="/"
               element={<Search setSelectedMovieId={setSelectedMovieId} />}
             />
-            {selectedMovieId && (
-              <Route
-                path="/details"
-                element={<MovieDetails selectedMovieId={selectedMovieId} />}
-              />
-            )}
+            <Route
+              path="/details"
+              element={<MovieDetails selectedMovieId={selectedMovieId} />}
+            />
           </Routes>
         </Router>
       </div>

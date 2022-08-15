@@ -6,25 +6,25 @@ import RenderCard from "../renderCard/RenderCard";
 import RenderForm from "../renderForm/RenderForm";
 
 const Search = ({ setSelectedMovieId }) => {
-  const [searchOption, setSearchOption] = useState("");
-  const [enteredOption, setEnteredOption] = useState("");
-  const [paginate, setPaginate] = useState(4);
+  const [searchInputData, setSearchInputData] = useState("");
+  const [inputData, setInputData] = useState("");
+  const [contentLoad, setContentLoad] = useState(4);
 
-  const [movies] = useSearch(enteredOption);
+  const [movies] = useSearch(inputData);
 
   return (
     <div className="container">
       <Header />
       <div className="my-3">
         <RenderForm
-          setSearchOption={setSearchOption}
-          setEnteredOption={setEnteredOption}
-          searchOption={searchOption}
+          setSearchInputData={setSearchInputData}
+          setInputData={setInputData}
+          searchInputData={searchInputData}
         />
       </div>
       <div className="d-flex flex-wrap">
         {movies &&
-          movies.slice(0, paginate).map((movie) => {
+          movies.slice(0, contentLoad).map((movie) => {
             return (
               <RenderCard
                 key={movie.imdbID}
@@ -35,11 +35,11 @@ const Search = ({ setSelectedMovieId }) => {
           })}
       </div>
       <div className="d-flex justify-content-center mt-3 mb-4">
-        {enteredOption && (
+        {inputData && (
           <Button
             className="rounded"
             variant="outline-secondary"
-            onClick={() => setPaginate(paginate + 4)}
+            onClick={() => setContentLoad(contentLoad + 4)}
           >
             Load more
           </Button>
