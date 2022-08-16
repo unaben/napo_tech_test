@@ -3,7 +3,7 @@ import useSearch from "../hooks/useSearch";
 import Header from "../header/Header";
 import { Button } from "react-bootstrap";
 import RenderCard from "../renderCard/RenderCard";
-import RenderForm from "../renderForm/RenderForm";
+import RenderForm from "../renderFormInput/RenderForm";
 
 const Search = ({ setSelectedMovieId }) => {
   const [searchInputData, setSearchInputData] = useState("");

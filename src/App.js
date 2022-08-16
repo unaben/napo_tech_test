@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Search from "./components/searchInput/Search";
+import Search from "./components/renderSearchList/Search";
 import MovieDetails from "./components/movieDetails/MovieDetails";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
