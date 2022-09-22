@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 const useMovieDetails = (selectedMovieId) => {
   const [moviesDetails, setMoviesDetails] = useState();
 
+  useEffect(() => {
   const getMovieDetails = async () => {
     const movieDetailsURL = `https://www.omdbapi.com/?apikey=a93ceeb4&i=${selectedMovieId}`;
     try {
@@ -14,7 +15,7 @@ const useMovieDetails = (selectedMovieId) => {
     }
   };
 
-  useEffect(() => {
+ 
     if (selectedMovieId) {
       getMovieDetails();
     }

@@ -4,6 +4,7 @@ import Header from "../header/Header";
 import { Button } from "react-bootstrap";
 import RenderCard from "../renderCard/RenderCard";
 import RenderForm from "../renderFormInput/RenderForm";
+import SearchIcon from "@mui/icons-material/Search";
 
 const Search = ({ setSelectedMovieId }) => {
   const [searchInputData, setSearchInputData] = useState("");
@@ -37,9 +38,10 @@ const Search = ({ setSelectedMovieId }) => {
       <div className="d-flex justify-content-center mt-3 mb-4">
         {inputData && (
           <Button
+            startIcon={<SearchIcon />}
             className="rounded"
             variant="outline-secondary"
-            onClick={() => setContentLoad(contentLoad + 4)}
+            onClick={() => setContentLoad((currValue) => currValue + 4)}
           >
             Load more
           </Button>
