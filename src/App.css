@@ -83,3 +83,15 @@ body {
   color: var(--color-dark);
   background: var(--color-transparent-6);
 }
+
+@media screen and (min-width: 250px) and (max-width: 480px) {
+  .desciption-text {
+    display: none;
+  }
+  .card-container {
+    width: 20rem;
+  }
+  .return-to-search-btn {
+    margin-bottom: 1rem;
+  }
+}
