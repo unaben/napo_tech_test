@@ -14,7 +14,7 @@ const MovieDetails = () => {
       <div className="d-flex mt-4 flex-column">
         <div className="d-flex gap-3 justify-content-center flex-wrap">
           <div>
-            <Card style={{ width: "22rem" }}>
+            <Card className="card-container" style={{ width: "22rem" }}>
               <Card.Img
                 variant="top"
                 className="movieDetail-img"
@@ -45,7 +45,7 @@ const MovieDetails = () => {
         </div>
         <div className="d-flex justify-content-center">
           <Link to="/">
-            <Button className="btn btn-secondary btn-lg mt-4">
+            <Button className="btn btn-secondary btn-lg mt-4 return-to-search-btn">
               Return to search
             </Button>
           </Link>

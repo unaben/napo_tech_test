@@ -30,7 +30,7 @@ const RenderForm = (props) => {
           }}
         />
       </form>
-      <p className="my-4" style={{ width: "94%", fontSize: "1.3rem" }}>
+      <p className="my-4 desciption-text" style={{ width: "94%", fontSize: "1.3rem" }}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni odit nemo
         voluptate vitae aliquid, dolore, ipsa suscipit quasi perspiciatis, qui
         officia. Itaque ratione eum non sunt minus necessitatibus libero totam
