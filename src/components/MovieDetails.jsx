@@ -14,7 +14,7 @@ const MovieDetails = () => {
       <div className="d-flex mt-4 flex-column">
         <div className="d-flex gap-3 justify-content-center flex-wrap">
           <div>
-            <Card className="card-container" style={{ width: "22rem" }}>
+            <Card className="card-container" style={{ width: "20rem" }}>
               <Card.Img
                 variant="top"
                 className="movieDetail-img"
